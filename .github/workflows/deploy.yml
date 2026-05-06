@@ -29,14 +29,14 @@ jobs:
         run: npm run build
 
       - name: Deploy dist folder to target repo
-        run: | 
-          git clone https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/iamyuna/iamyuna.github.io.git
-          rm -rf iamyuna.github.io/2026_portfolio
-          mkdir iamyuna.github.io/2026_portfolio
-          cp -r dist/* iamyuna.github.io/2026_portfolio/
-          cd iamyuna.github.io
+        run: |
+          cd dist
+          touch .nojekyll
+          git init
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
-          git diff --cached --quiet || git commit -m "deploy: 2026_portfolio $(date '+%Y-%m-%d')"
-          git push
+          git commit -m "deploy: $(date '+%Y-%m-%d')"
+          git branch -M main
+          git remote add origin https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/iamyuna/iamyuna.github.io.git
+          git push -f origin main

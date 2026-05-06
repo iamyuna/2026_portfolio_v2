@@ -1,0 +1,44 @@
+﻿@import './font.scss';
+
+* {
+    font-family:'Poppins', 'Noto Sans KR', sans-serif;
+}
+
+body,
+html,
+#wrap,
+#container,
+#contents,
+main {
+  width: 100%;
+  height: auto;
+}
+
+#bg{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    z-index:1001;
+}
+
+/* header */
+header .logo {
+    position:absolute;
+    top:30px;
+    left:30px;
+    width:66px;
+    height: 22px;
+
+    a {
+        display:block;
+        width:100%;
+        height:100%;
+        font-size:0;
+        text-indent: -9999px;
+        background:url(../images/logo.png) no-repeat center / contain;
+    }
+}
