@@ -44,8 +44,8 @@ export default function About(){
                 const index = Math.floor(progress)
                 const ratio = progress - index
 
-                current.style.backgroundImage = `url(src/assets/images/career_img${index}.jpg)`
-                next.style.backgroundImage = `url(src/assets/images/career_img${Math.min(index + 1, totalImg)}.jpg)`
+                current.style.backgroundImage = `url(images/career_img${index}.jpg)`
+                next.style.backgroundImage = `url(images/career_img${Math.min(index + 1, totalImg)}.jpg)`
 
                 const year = careerText[index] || careerText[careerText.length - 1]
                 textRef.current.textContent = year

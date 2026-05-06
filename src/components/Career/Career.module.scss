@@ -2,15 +2,15 @@
     position: relative;
     background-color: #000;
     height: 100vh;
-    background: url(src/assets/images/career_con1.jpg) no-repeat center / cover; 
+    background: url(/images/career_con1.jpg) no-repeat center / cover; 
     transition: background 0.5s;
     z-index: 1;
 
     &:global(.active1) {
-        background-image: url(src/assets/images/career_con1.jpg);
+        background-image: url(/images/career_con1.jpg);
     }   
     &:global(.active2) {
-        background-image: url(src/assets/images/career_con2.jpg);
+        background-image: url(/images/career_con2.jpg);
     }
 }
 .inner {

@@ -8,7 +8,7 @@
             "#Vue",
             "#Scss"
         ],
-        "mainImg": "src/assets/images/portfolio_aidt.jpg"
+        "mainImg": "images/portfolio_aidt.jpg"
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
             "Redux", 
             "Styled-Components"
         ],
-        "mainImg": "src/assets/images/portfolio_classlink.jpg",
+        "mainImg": "images/portfolio_classlink.jpg",
         "link": "https://www.classlink.co.kr/"
     },
     {
@@ -34,7 +34,7 @@
             "Css", 
             "Javascript"
         ],
-        "mainImg": "src/assets/images/portfolio_classpingpong.jpg",
+        "mainImg": "images/portfolio_classpingpong.jpg",
         "link": "https://www.clpong.co.kr/"
     },
     {
@@ -48,7 +48,7 @@
             "Scss", 
             "Gsap"
         ],
-        "mainImg": "src/assets/images/portfolio_2026.jpg",
+        "mainImg": "images/portfolio_2026.jpg",
         "link": "/",
         "code": "https://github.com/iamyuna/2026_portfolio"
     },
@@ -63,7 +63,7 @@
             "LocalStorage", 
             "Tailwind"
         ],
-        "mainImg": "src/assets/images/portfolio_accountapp.jpg",
+        "mainImg": "images/portfolio_accountapp.jpg",
         "link": "https://iamyuna.github.io/accountapp",
         "code": "https://github.com/iamyuna/accountapp"
     },
@@ -79,7 +79,7 @@
             "Gsap", 
             "Swiper.js"
         ],
-        "mainImg": "src/assets/images/portfolio_gooroomee.jpg",
+        "mainImg": "images/portfolio_gooroomee.jpg",
         "link": "https://biz.gooroomee.com/"
     },
     {
@@ -94,7 +94,7 @@
             "Gsap", 
             "Swiper.js"
         ],
-        "mainImg": "src/assets/images/portfolio_isu.jpg",
+        "mainImg": "images/portfolio_isu.jpg",
         "link": "https://www.workup.plus/"
     },
     {
@@ -108,7 +108,7 @@
             "JQuery", 
             "Swiper.js"
         ],
-        "mainImg": "src/assets/images/portfolio_attoplex.jpg",
+        "mainImg": "images/portfolio_attoplex.jpg",
         "link": "http://attoplex.co.kr/"
     },
     {
@@ -121,7 +121,7 @@
             "Css", 
             "JQuery"
         ],
-        "mainImg": "src/assets/images/portfolio_kudos.jpg",
+        "mainImg": "images/portfolio_kudos.jpg",
         "link": "http://kudosventures.co.kr/"
     },
     {
@@ -134,7 +134,7 @@
             "Css", 
             "JQuery"
         ],
-        "mainImg": "src/assets/images/portfolio_web.jpg",
+        "mainImg": "images/portfolio_web.jpg",
         "link": "https://iamyuna.github.io/2023_portfolio",
         "code": "https://github.com/iamyuna/2023_portfolio"
     }
