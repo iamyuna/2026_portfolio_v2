@@ -16,7 +16,7 @@
     height: 100%;
     transform: translate(0,0) !important;
 }
-.panel {
+.projectItem {
     position: absolute;
     inset: 0;
     display: flex;
@@ -36,6 +36,7 @@
         text-align: center;
 
         .projectTit {
+            display: inline-block;
             font-size: clamp(30px, 5vw, 70px);
             text-transform: uppercase;
             letter-spacing: -0.03em;

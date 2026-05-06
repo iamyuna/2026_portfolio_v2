@@ -10,11 +10,14 @@ export default function Project(){
     const projectRef = useRef(null)
 
     useEffect(() => {
-        const slides = document.querySelectorAll(".project_slide");
+        const slides = projectRef.current.querySelectorAll(".project_slide");
         slides.forEach(slide => {
             const contentWrapper = slide.querySelector(".project_wrapper");
-            const content = slide.querySelector(".panel");
+            const content = slide.querySelector(".project_item");
+            const itemUp = slide.querySelector(".item_up");
+
             if (!contentWrapper || !content) return;
+
             gsap.to(content, {
                 opacity: 0,
                 rotationZ: (Math.random() - 0.5) * 10,
@@ -29,21 +32,32 @@ export default function Project(){
                     scrub: true
                 }
             });
-            gsap.to(content, {
-                opacity: 0,
-                autoAlpha: 0,
-                ease: "power1.in",
-                scrollTrigger: {
-                    trigger: content,
-                    start: "top -100%",
-                    end: "+=" + window.innerHeight,
-                    scrub: true
+
+            gsap.fromTo(itemUp, 
+                {
+                    y: 50,
+                    opacity: 0,
+                    scale: 0.8,
+                    rotateX: 45,
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    rotateX: 0,
+                    ease: "power2.out",
+                    duration: 0.6,
+                    scrollTrigger: {
+                        trigger: content,
+                        start: "top 30%",
+                        toggleActions: "play none none reverse"
+                    }
                 }
-            });
+            );
         });
     },[]);
     return(
-        <div className={`${styles.container}`}>
+        <div ref={projectRef} className={styles.container}>
             <div>
                 {projects
                     .filter(project => project.main)
@@ -51,10 +65,10 @@ export default function Project(){
                     <div key={project.id} className={`${styles.projects} project_slide`}>
                         <div className={`${styles.project_wrapper} project_wrapper`}>
                             <section 
-                            className={`${styles.panel} panel`}
+                            className={`${styles.projectItem} project_item`}
                             style={{ backgroundImage: `url(${project.mainImg})` }}
                             >
-                                <div className={styles.projectInner}>
+                                <div className={`${styles.projectInner} item_up`}>
                                     <strong className={styles.projectTit}>
                                         {project.title}
                                     </strong>
