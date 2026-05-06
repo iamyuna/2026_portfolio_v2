@@ -1,0 +1,54 @@
+/* reset.scss */
+
+/* 박스 사이즈 계산을 border-box로 통일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 기본 여백 제거 */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+figure, figcaption,
+blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* 리스트 점 제거 */
+ul, ol {
+  list-style: none;
+}
+
+/* 링크 기본 스타일 제거 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 이미지와 영상의 최대 크기 제어 */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 버튼, input 등 기본 폰트 상속 */
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button:hover,
+a:hover {
+    color: #000;
+}
+
+/* strong, b 기본 굵기 조정 */
+strong, b {
+  font-weight: 600;
+}
