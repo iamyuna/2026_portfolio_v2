@@ -1,4 +1,4 @@
-name: Deploy Portfolio1 to Main Repo
+name: Deploy to iamyuna.github.io/2026_portfolio
 
 on:
   push:
@@ -9,35 +9,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 코드 가져오기
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Node 설치
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: 설치
+      - name: Install
         run: npm install
 
-      - name: 빌드
+      - name: Build
         run: npm run build
 
-      - name: 메인 레포 clone
+      - name: Deploy to main repo
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git clone https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/iamyuna/iamyuna.github.io.git
-
-      - name: dist 복사
-        run: |
+          git clone https://x-access-token:$GH_TOKEN@github.com/iamyuna/iamyuna.github.io.git
+          
           rm -rf iamyuna.github.io/2026_portfolio
           mkdir iamyuna.github.io/2026_portfolio
+          
           cp -r dist/* iamyuna.github.io/2026_portfolio/
 
-      - name: push
-        run: |
           cd iamyuna.github.io
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add .
-          git commit -m "deploy 2026_portfolio"
+          git commit -m "deploy: 2026_portfolio"
           git push
