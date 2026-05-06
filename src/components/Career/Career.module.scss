@@ -3,13 +3,23 @@
     background-color: #000;
     height: 100vh;
     background: url(/images/career_con1.jpg) no-repeat center / cover; 
-    transition: background 0.5s;
     z-index: 1;
 
-    &:global(.active1) {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/images/career_con1.jpg) no-repeat center / cover; 
+        transition: background 0.5s;
+    }
+
+    &:global(.active1)::before {
         background-image: url(/images/career_con1.jpg);
     }   
-    &:global(.active2) {
+    &:global(.active2)::before {
         background-image: url(/images/career_con2.jpg);
     }
 }

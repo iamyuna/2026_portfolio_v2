@@ -18,6 +18,11 @@ export default function About(){
         const careerText = ["2020","2021","2022","2024","2025","2026"]
         const totalImg = 6;
 
+        for (let i = 1; i <= totalImg; i++) {
+            const img = new Image();
+            img.src = `images/career_img${i}.jpg`;
+        }
+
         const width = el.getBoundingClientRect().width;
         document.documentElement.style.setProperty("--vw", `${width}px`);
 
