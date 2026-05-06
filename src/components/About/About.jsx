@@ -18,10 +18,24 @@ export default function About(){
         const careerText = ["2020","2021","2022","2024","2025","2026"]
         const totalImg = 6;
 
+        const width = el.getBoundingClientRect().width;
+        document.documentElement.style.setProperty("--vw", `${width}px`);
+
+        window.addEventListener("resize", () => {
+            const width = el.getBoundingClientRect().width;
+            document.documentElement.style.setProperty("--vw", `${width}px`);
+            
+            console.log(width);
+        });
+
         ScrollTrigger.create({
             trigger: el,
             start: "top 50%",
-            end: "bottom 80%",
+            end: () => {
+                return window.innerWidth <= 1023
+                ? "bottom 110%"
+                : "bottom 80%";
+            },
             scrub: 1,
             onUpdate: (self) => {
                 const total = totalImg - 1
@@ -56,12 +70,12 @@ export default function About(){
             <div className={styles.inner}>
                 <div className={styles.aboutTit}>
                     <strong className="text-up">
-                        3년 6개월의 실무 경험을 가진 <span><em>웹 퍼블리셔</em></span>입니다. <br/>
+                        3년 6개월의 실무 경험을 가진 <span><em>웹퍼블리셔</em></span>입니다. <br/>
                         <span><em>모션과 인터랙션</em></span>을 통해 사용자 경험을 개선하는 강점을 가지고 있으며,<br/>
-                        빠르고 안정적인 퍼블리싱으로 <span><em>완성도 높은 결과물</em></span>을 만들어냅니다.
+                        빠르고 안정적인 퍼블리싱으로 <div className={styles.mbr}></div> <span><em>완성도 높은 결과물</em></span>을 만들어냅니다.
                     </strong>
                 </div>
-                <div ref={careerRef} className={styles.careerWrap}>
+                <div ref={careerRef} className={`${styles.careerWrap} career_wrap`}>
                     <div className={styles.career}>
                         <strong>2020</strong>
                         <strong ref={textRef}>2020</strong>

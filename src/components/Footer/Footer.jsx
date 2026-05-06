@@ -18,7 +18,7 @@ const Footer = forwardRef(function Footer(props, ref){
                         </li>
                         <li>
                             <p>GITHUB :</p>
-                            <span><a href="https://github.com/iamyuna/2026_portfolio" target="_blank">iamyuna</a></span>
+                            <span><a href="https://github.com/iamyuna/2026_portfolio_v2" target="_blank">iamyuna</a></span>
                         </li>
                     </ul>
                     <div className={styles.botText}>

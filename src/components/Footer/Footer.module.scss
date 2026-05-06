@@ -22,6 +22,10 @@ footer {
     height: 100%;
     margin: 0 auto;
     padding: 0 40px;
+
+    @media (max-width: 1023px) {
+        padding: 0 20px;
+    }
 }
 .rollText {
     width: 100vw;
@@ -29,16 +33,16 @@ footer {
     
     p {
         font-family: "Roboto Condensed";
-        font-size: clamp(70px, 16vw, 256px);
+        font-size: clamp(60px, 16vw, 256px);
         font-weight: 700;
         line-height: 0.75;
         color: #fff;
-        transform: translateY(100%);
+        transform: translateY(1em);
         transition: 0.5s ease;
     }
 }
 :global(footer.in-view) .rollText p {
-    transform: translateY(10px);
+    transform: translateY(5px);
 }
 .infoList {
     display: flex;
@@ -96,7 +100,7 @@ footer {
             + li {
                 margin-top: 20px;
             }
-            a {
+            span {
                 margin-top: 0;
                 margin-left: 10px;
             }

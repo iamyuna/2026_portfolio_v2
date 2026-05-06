@@ -13,11 +13,15 @@
     max-width: 1920px;
     margin: 0 auto;
     padding: 150px 40px;
+
+    @media (max-width: 1023px) {
+        padding: 150px 20px;
+    }
 }
 .skillsText {
     strong {
         display: block;
-        font-size: 70px;
+        font-size: clamp(30px, 5vw, 70px);
         font-style: italic;
         letter-spacing: -0.03em;
         line-height: 1.1;
@@ -32,11 +36,13 @@
 
     .skillsList {
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
 
         li {
+            position: relative;
             width: calc((100% - 70px) / 8);
-            height: 200px;
+            padding-bottom: calc((100% - 70px) / 8);
             transition: 0.5s;
 
             @for $i from 1 through 20 {
@@ -44,16 +50,23 @@
                     transition-delay: 0.05s * $i;
                 }
             }
- 
 
             img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
             }
         }
+    }
 
-        + ul {
-            margin-top: 10px;
+    @media (max-width: 1023px) {
+        margin-top: 50px;
+        
+        .skillsList li {
+            width: calc((100% - 30px) / 4);
+            padding-bottom: calc((100% - 30px) / 4);
         }
     }
 }

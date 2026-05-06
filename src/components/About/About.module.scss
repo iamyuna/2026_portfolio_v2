@@ -10,11 +10,16 @@
     height: 100%;
     margin: 0 auto;
     padding: 0 40px;
+        
+    @media (max-width: 1023px) {
+        padding: 0 20px;
+    }
 }
 .aboutTit strong {
-    font-size: clamp(30px, 3vw, 42px);
+    font-size: clamp(20px, 3vw, 42px);
     line-height: 1.3;
     color: #000;
+    word-break: keep-all;
 
     span {
         position: relative;
@@ -41,6 +46,12 @@
             will-change: transform;
             transition: transform 0.3s;
         }
+
+        .mbr {display: none;}
+
+        @media (max-width: 1023px) {
+            .mbr {display: block;}
+        }
     }
 
     &:global(.active span::after) {
@@ -59,10 +70,11 @@
 
         strong {
             display: block;
+            width: 120px;
             font-size: 50px;
 
             &:nth-child(2) {
-                transform: translateX(calc(var(--progress) * calc(100vw - 350px)));
+                transform: translateX(calc(var(--progress) * (var(--vw) - 275px)));
                 margin-left: 40px;
             }
         }
@@ -78,14 +90,16 @@
             transform-origin: top left;
             will-change: transform;
         }
+
     }
     .careerImg {
         position: relative;
-        width: 550px;
+        width: 100%;
+        max-width: 550px;
         height: 400px;
         background: #000;
         margin-top: 50px;
-        transform: translateX(calc(var(--progress) * calc(100vw - 630px)));
+        transform: translateX(calc(var(--progress) * (var(--vw) - 550px)));
         will-change: transform;
 
         div {
@@ -98,6 +112,31 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url(src/assets/images/career_img1.jpg);
+        }
+    }
+
+    @media (max-width: 1023px) {
+        margin-top: 0;
+        
+        .career {
+            strong {
+                width: 58px;
+                font-size: 25px;
+
+                &:nth-child(2) {
+                    transform: translateX(calc(var(--progress) * (var(--vw) - 150px)));
+                    margin-left: 30px;
+                }
+            }
+            &::before {
+                top: 10px;
+                left: 65px;
+                width: calc(100% - 136px);
+                transform: scaleX(clamp(0.1,var(--progress, 0),1)) scaleY(1);
+            }
+        }
+        .careerImg {
+            transform: translateX(0);
         }
     }
 }

@@ -60,10 +60,18 @@ export default function Project(){
                                     </strong>
                                     <div className={styles.btnWrap}>
                                         {project.link ? (
-                                            <a href={project.link} target="_blank">VIEW SITE</a>
+                                            <a href={project.link} target="_blank">
+                                                <span>
+                                                    <p>VIEW SITE<br/>VIEW SITE</p>
+                                                </span>
+                                            </a>
                                         ) : null}
                                         {project.code ? (
-                                            <a href={project.code} target="_blank">VIEW GITHUB</a>
+                                            <a href={project.code} target="_blank">
+                                                <span>
+                                                    <p>VIEW GITHUB<br/>VIEW GITHUB</p>
+                                                </span>
+                                            </a>
                                         ) : null}
                                     </div>
                                 </div>

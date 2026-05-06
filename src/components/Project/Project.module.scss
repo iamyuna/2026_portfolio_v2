@@ -32,25 +32,60 @@
     background-size: cover;
 
     .projectInner {
+        width: 100%;
         text-align: center;
 
         .projectTit {
-            font-size: 70px;
+            font-size: clamp(30px, 5vw, 70px);
             text-transform: uppercase;
             letter-spacing: -0.03em;
             color: #fff;
         }
         .btnWrap {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             margin-top: 50px;
 
             a {
-                display: inline-block;
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 width: 200px;
+                height: 60px;
                 font-size: 20px;
                 color: #fff;
-                background: rgba(0,0,0,0.5);
-                line-height: 60px;
-                margin: 0 5px;
+                background: #000;
+                overflow: hidden;
+
+                span {
+                    display: inline-block;
+                    height: 1em;
+                    overflow: hidden;
+
+                    p {
+                        will-change: transform;
+                    }
+                }
+
+                &:hover span p {
+                    transform: translateY(-20px);
+                    transition: 0.6s;
+                }
+            }
+
+            @media (max-width: 1023px) {
+                width: 100%;
+                margin-top: 30px;
+
+                a {
+                    width: 50%;
+                    max-width: 200px;
+                    height: 40px;
+                    margin: 0 auto;
+                    font-size: 15px;
+                }
             }
         }
     }

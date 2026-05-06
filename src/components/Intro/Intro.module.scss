@@ -25,7 +25,7 @@
             span {
                 display: inline-block;
                 font-family: "Roboto Condensed";
-                font-size: 92px;
+                font-size: clamp(50px, 6vw, 92px);
                 font-weight: 700;
                 line-height: 0.8;
                 color: #fff;
