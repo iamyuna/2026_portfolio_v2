@@ -21,7 +21,6 @@ export default function Career(){
                 },
             }
         );
-        
     },[]);
     return(
         <div ref={careerConRef} className={styles.container}>
