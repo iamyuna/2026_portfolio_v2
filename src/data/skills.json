@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Next.js", 
+        "icon": "src/assets/images/i_next.png"
+    },
+    {
+        "id": 2,
+        "name": "React.js", 
+        "icon": "src/assets/images/i_react.png"
+    },
+    {
+        "id": 3,
+        "name": "Zustand", 
+        "icon": "src/assets/images/i_zustand.png"
+    },
+    {
+        "id": 4,
+        "name": "Tailwind", 
+        "icon": "src/assets/images/i_tailwind.png"
+    },
+    {
+        "id": 5,
+        "name": "Scss", 
+        "icon": "src/assets/images/i_sass.png"
+    },
+    {
+        "id": 6,
+        "name": "HTML5", 
+        "icon": "src/assets/images/i_html.png"
+    },
+    {
+        "id": 7,
+        "name": "JavaScript", 
+        "icon": "src/assets/images/i_js.png"
+    },
+    {
+        "id": 8,
+        "name": "CSS", 
+        "icon": "src/assets/images/i_css.png"
+    }
+]

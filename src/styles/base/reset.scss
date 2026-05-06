@@ -1,0 +1,81 @@
+/* =========================
+   Reset CSS
+========================= */
+
+/* box-sizing */
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+/* margin / padding 제거 */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,figure,figcaption,blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* 기본 body 설정 */
+body {
+  min-height: 100vh;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 리스트 스타일 제거 */
+ul,ol {
+  list-style: none;
+}
+
+/* 링크 기본 스타일 제거 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 이미지 */
+img,picture,video,canvas,svg {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 버튼 */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* input / textarea */
+input,textarea,select {
+  font: inherit;
+  outline: none;
+}
+
+/* table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* form 요소 기본 스타일 제거 (iOS 대응 포함) */
+input,button,textarea,select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* textarea resize 제거 (선택) */
+textarea {
+  resize: none;
+}
+
+/* =========================
+   Accessibility
+========================= */
+
+/* focus 스타일 (접근성 유지하면서 커스텀 가능) */
+:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}

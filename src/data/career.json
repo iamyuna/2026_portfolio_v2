@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "CHUNJAE EDUCATION",
+        "duration": "2024.01 - 2025.01",
+        "role": "Web Publisher",
+        "skills": "Html Scss Javascript React Vue",
+        "img": "src/assets/images/career_con1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "DESIGN PIXEL",
+        "duration": "2020.12 - 2023.04",
+        "role": "Web Publisher",
+        "skills": "Html css Javascript Cafe24 Godomall",
+        "img": "src/assets/images/career_con2.jpg"
+    }
+]

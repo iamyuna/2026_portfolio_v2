@@ -1,0 +1,57 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    z-index: 1;
+}
+
+.projects {
+    border-top: 1px #fff;
+    border-bottom: 1px #fff;
+    height: 100vh;
+}
+.project_wrapper {
+    perspective: 250vw;
+    width: 100%;
+    height: 100%;
+    transform: translate(0,0) !important;
+}
+.panel {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform-origin: 50% 10%;
+    background-color: #000;
+    padding: 1.25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .projectInner {
+        text-align: center;
+
+        .projectTit {
+            font-size: 70px;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            color: #fff;
+        }
+        .btnWrap {
+            margin-top: 50px;
+
+            a {
+                display: inline-block;
+                width: 200px;
+                font-size: 20px;
+                color: #fff;
+                background: rgba(0,0,0,0.5);
+                line-height: 60px;
+                margin: 0 5px;
+            }
+        }
+    }
+}

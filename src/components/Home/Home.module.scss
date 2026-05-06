@@ -1,0 +1,138 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets/images/home_bg.jpg) no-repeat top center / 100% 100vh;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transform: scaleY(clamp(0,var(--progress, 0) * 10,1)) scaleX(1);
+        transform-origin: bottom left;
+        z-index: 2;
+        will-change: transform;
+        transition: transform 0.9s;
+    }
+    .inner {
+        position: relative;
+        width: 100%;
+        max-width: 1920px;
+        height: 100%;
+        margin: 0 auto;
+        mix-blend-mode: difference;
+        z-index: 3;
+    }
+    .stickyCon {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 60vh;
+    }
+    .topTit {
+        font-family: "Roboto Condensed";
+        font-size: clamp(50px, 15.5vw, 297px);
+        font-weight: 700;
+        line-height: 0.8;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+        padding-top: 20px;
+
+        span {
+            display: inline-block;
+            transform: translateY(1em);
+            transition: transform 0.9s ease-in-out;
+            will-change: transform;
+        }
+        @for $i from 1 through 20 {
+            span:nth-child(#{$i + 1}) {
+                transition-delay: 0.05s * $i;
+            }
+        }
+    }
+
+    .conWrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        margin-top: 80px;
+
+        .career {
+            font-size: 18px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.8s ease 1.2s;
+
+            strong {
+                font-weight: 500;
+            }
+            span {
+                margin-left: 15px;
+            }
+        }
+        .link {
+            display: flex;
+            opacity: 0;
+            transition: opacity 0.8s ease 1.2s;
+
+            span {
+                height: 18px;
+                font-size: 18px;
+                color: #fff;
+                overflow: hidden;
+
+                + span {
+                    margin-left: 15px;
+                }
+                a {
+                    display: block;
+
+                    &:hover {
+                        transform: translateY(-18px);
+                        transition: 0.6s;
+                    }
+                }
+            }
+        }
+    }
+    .scroll {
+        position: absolute;
+        top: 95vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        span {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.8s ease 1.5s;
+        }
+        @for $i from 1 through 10 {
+            span:nth-child(#{$i}) {
+                transition-delay: 1.5s + (0.05s * $i);
+            }
+        }
+    }
+
+    &.active {
+        .topTit span {
+            transform: translateY(0);
+        }
+        .conWrap .career, .conWrap .link {
+            opacity: 1;
+        }
+        .scroll span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}

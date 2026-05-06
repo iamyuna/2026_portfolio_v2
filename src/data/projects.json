@@ -1,0 +1,141 @@
+[
+    {
+        "id": 1,
+        "main": false,
+        "title": "천재교육 AIDT",
+        "des": "천재교육의 AIDT 프로젝트입니다.",
+        "skills": [
+            "#Vue",
+            "#Scss"
+        ],
+        "mainImg": "src/assets/images/portfolio_aidt.jpg"
+    },
+    {
+        "id": 2,
+        "main": true,
+        "title": "Class Link",
+        "des": "천재교육의 클래스링크 웹사이트입니다.",
+        "skills": [
+            "React", 
+            "Storybook", 
+            "Redux", 
+            "Styled-Components"
+        ],
+        "mainImg": "src/assets/images/portfolio_classlink.jpg",
+        "link": "https://www.classlink.co.kr/"
+    },
+    {
+        "id": 3,
+        "main": true,
+        "title": "Class Pingpong",
+        "des": "천재교육의 클래스핑퐁 웹사이트입니다.",
+        "skills": [
+            "Html", 
+            "Css", 
+            "Javascript"
+        ],
+        "mainImg": "src/assets/images/portfolio_classpingpong.jpg",
+        "link": "https://www.clpong.co.kr/"
+    },
+    {
+        "id": 4,
+        "main": false,
+        "title": "2026 Portfolio",
+        "des": "React로 작업한 포트폴리오 사이트입니다.",
+        "skills": [
+            "React",
+            "Javascript", 
+            "Scss", 
+            "Gsap"
+        ],
+        "mainImg": "src/assets/images/portfolio_2026.jpg",
+        "link": "/",
+        "code": "https://github.com/iamyuna/2026_portfolio"
+    },
+    {
+        "id": 5,
+        "main": true,
+        "title": "React Account App",
+        "des": "React 가계부 프로젝트입니다.",
+        "skills": [
+            "React", 
+            "Zustand", 
+            "LocalStorage", 
+            "Tailwind"
+        ],
+        "mainImg": "src/assets/images/portfolio_accountapp.jpg",
+        "link": "https://iamyuna.github.io/accountapp",
+        "code": "https://github.com/iamyuna/accountapp"
+    },
+    {
+        "id": 6,
+        "main": true,
+        "title": "Gooroomee Biz",
+        "des": "구루미 비즈의 반응형 웹사이트 입니다.",
+        "skills": [
+            "Html", 
+            "Css", 
+            "JQuery", 
+            "Gsap", 
+            "Swiper.js"
+        ],
+        "mainImg": "src/assets/images/portfolio_gooroomee.jpg",
+        "link": "https://biz.gooroomee.com/"
+    },
+    {
+        "id": 7,
+        "main": true,
+        "title": "Isu System Work Up",
+        "des": "이수시스템 Work Up의 반응형 웹사이트 입니다.",
+        "skills": [
+            "Html", 
+            "Css", 
+            "JQuery", 
+            "Gsap", 
+            "Swiper.js"
+        ],
+        "mainImg": "src/assets/images/portfolio_isu.jpg",
+        "link": "https://www.workup.plus/"
+    },
+    {
+        "id": 8,
+        "main": false,
+        "title": "Attoplex",
+        "des": "아토플렉스의 반응형 웹사이트 입니다.",
+        "skills": [
+            "Html", 
+            "Css", 
+            "JQuery", 
+            "Swiper.js"
+        ],
+        "mainImg": "src/assets/images/portfolio_attoplex.jpg",
+        "link": "http://attoplex.co.kr/"
+    },
+    {
+        "id": 9,
+        "main": false,
+        "title": "Kudos Ventures",
+        "des": "큐더스벤처스의 반응형 웹사이트 입니다.",
+        "skills": [
+            "Html", 
+            "Css", 
+            "JQuery"
+        ],
+        "mainImg": "src/assets/images/portfolio_kudos.jpg",
+        "link": "http://kudosventures.co.kr/"
+    },
+    {
+        "id": 10,
+        "main": false,
+        "title": "2023 Portfolio",
+        "des": "2023 웹퍼블리셔 포트폴리오 사이트입니다.",
+        "skills": [
+            "Html", 
+            "Css", 
+            "JQuery"
+        ],
+        "mainImg": "src/assets/images/portfolio_web.jpg",
+        "link": "https://iamyuna.github.io/2023_portfolio",
+        "code": "https://github.com/iamyuna/2023_portfolio"
+    }
+]
