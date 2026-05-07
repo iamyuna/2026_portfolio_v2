@@ -24,8 +24,8 @@ const Footer = forwardRef(function Footer(props, ref){
                     <div className={styles.botText}>
                         <p className={styles.copy}>© 2026. Park Yuna Portfolio, Inc. All Rights Reserved.</p>
                         <div className={styles.viewBtn}>
-                            <a href="/resume.pdf" target="_blank">
-                                View Resume
+                            <a href="https://www.notion.so/35861c26a85580d28008f7425e6d8452?source=copy_link" target="_blank">
+                                View Notion
                                 <IconArrow/>
                             </a>
                         </div>
