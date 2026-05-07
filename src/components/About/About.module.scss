@@ -21,6 +21,12 @@
     color: #000;
     word-break: keep-all;
 
+    .mbr {display: none;}
+
+    @media (max-width: 1023px) {
+        .mbr {display: block;}
+    }
+
     span {
         position: relative;
         padding: 0 5px;
@@ -45,12 +51,6 @@
             transform-origin: left;
             will-change: transform;
             transition: transform 0.3s;
-        }
-
-        .mbr {display: none;}
-
-        @media (max-width: 1023px) {
-            .mbr {display: block;}
         }
     }
 

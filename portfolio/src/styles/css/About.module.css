@@ -24,6 +24,14 @@
   color: #000;
   word-break: keep-all;
 }
+.aboutTit strong .mbr {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .aboutTit strong .mbr {
+    display: block;
+  }
+}
 .aboutTit strong span {
   position: relative;
   padding: 0 5px;
@@ -47,14 +55,6 @@
   transform-origin: left;
   will-change: transform;
   transition: transform 0.3s;
-}
-.aboutTit strong span .mbr {
-  display: none;
-}
-@media (max-width: 1023px) {
-  .aboutTit strong span .mbr {
-    display: block;
-  }
 }
 .aboutTit strong:global(.active span::after) {
   transform: scaleX(1);
